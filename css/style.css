@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin:0;
+  background-color: lightgrey;
+  padding-top: 10px;
+  font-family: 'Slabo 27px', serif;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: grey;
+}
+
+
+img.mylogo {
+  width: 10%;
+  height: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navi {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}  
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  padding-right: 15px;
+}  
+
+.nav a:hover {
+  color: white;
+} 
+
+.home-layout {
+  display: flex;
+}
+
+.products-top {
+  text-align: center;
+  padding: 0.6em;
+  color: grey;
+  font-size: 21px;
+}
+
+ul.toptop {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.toptop > li {
+  float: left;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.myinforpicture {
+  width: 100%;
+  height: auto;
+}
+
+
+.categories-ul {
+  margin:0;
+  padding:0;
+  padding-bottom: 80px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.categories-ul > li > a {
+  text-decoration: none;
+  color: grey;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.categories-ul > li > a:hover {
+  color: black;
+}
+
+a .product-name {
+  text-decoration: none;
+}
+
+.members {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.mypicture {
+  width: 100%;
+  height: auto;
+  padding-right: 8px;
+}
+
+img.mypicture:hover {
+  border: 3px solid darkslategrey;
+}
+
+.footer {
+  padding-top: 25px;
+  text-align: right;
+  font-size: 10px;
+}
+
+input.button.submit {
+  background-color: green;
+  color: white;
+}
+.spaces {
+  padding-bottom: 15px;
+  background-color: black;
+  width: 100%;
+}
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: darkgrey;
+}
+.year {
+  font-size: 12px;
+  color: darkgrey;
+}
+.rating {
+  font-size: 12px;
+  color: darkgrey;
+}
+
+
