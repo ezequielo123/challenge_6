@@ -1,11 +1,7 @@
 <div class="row">
     <div class="col-md-8">
 
-        <?php echo $pictures; ?>
-
-        <?php echo $details; ?>
-
-        <?php echo $born_today; ?>
+        <?php echo $form_view; ?>
 
     </div>
     <div class="col-md-3">

@@ -1,17 +1,16 @@
 <?php 
 
-class Movie_Model extends model
+class Movies_Model extends model
 {
-   protected static $object_class = 'Movie_Object';
+   protected static $object_class = 'Movies_Object';
 
-   public static function getMovie()
+   public static function getMovies()
    {
         //write query
         $query = "
             SELECT imdb_movie.* 
             FROM imdb_movie 
-            WHERE imdb_movie.rating > 8.3
-            AND votes_nr > 150000
+            WHERE imdb_movie.rating > 9.7
             order by rating DESC
         ";
 

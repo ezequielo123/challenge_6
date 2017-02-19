@@ -1,9 +1,9 @@
 <?php
-class Movie_Object
+class new_Movies_Model_Object
 {
     public function getUrls()
     {
-        return url::to('movie', array(
+        return url::to('movies', array(
             'id' => $this->id
         ));
     }

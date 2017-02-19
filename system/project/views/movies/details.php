@@ -1,13 +1,31 @@
-<div class="movie-details">
-    
-    <div class="container">
-        <div class="row">
+<div class="container-left">
+    <h2>Top Rated Movies</h2>
+    <h6>Top 250 as rated by IMDb Users</h6>
+        <table class="table table-striped">
+            <tr>
+                <td><strong>Rank &amp; Title</strong></td>
+                <td><strong>IMDB Rating</strong></td>
+            </tr>
             <?php foreach ($movies as $movie) : ?>
-                    <div class="col-sm-4 spaces"><div class="name"><?php echo $movie->name; ?> <?php echo '<span class="year">' . $movie->year . '</span> '; ?><?php echo ' <span class="year">&star; ' . $movie->rating . '</span>'; ?></div></div>
+            <tr>   
+                <td>
+                    <?php echo $movie->name; ?> <?php echo ' <small> (' . $movie->year . ')</small> '; ?>
+                </td>
+                <td>
+                    <?php echo '&star; ' . $movie->rating; ?>
+                </td>
+            </tr>        
             <?php endforeach; ?>
-        </div>
-    </div>
-    <p>Fusce eleifend eget lectus ut tempor. Nam efficitur, mauris quis rutrum cursus, enim massa iaculis enim, malesuada sagittis quam nibh id eros. Nullam efficitur felis gravida nulla rhoncus, et aliquam neque finibus. Pellentesque nisl ex, semper eget enim in, mollis facilisis turpis. Ut iaculis massa risus. Etiam facilisis accumsan massa, eget volutpat turpis vulputate a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeo.</p>
+        </table>
+    <hr>
+    <p>The Top Rated Movie list only includes theatrical features.</p>
 
-    <p>Nulla et finibus erat, et consectetur mauris. Donec fringilla odio eros, eu tincidunt leo lacinia et. Sed sed pulvinar mauris. Donec sem lectus, suscipit at sollicitudin vitae, ullamcorper at augue. Ut molestie mi nec dui porttitor, ac lacinia diam porta. Fusce aliquam sapien et nisl feugiat, nec pellentesque nunc mollis. Quisque bibendum quam cursus, porta tellus ac, ultricies nisl. Donec et tellus sed libero iaculis auctor. Etiam velit ex, rhoncus nec quam sit amet, gravida ornare turpis. Aliquam erat volutpat.</p>
-</div>      
+    <ul>
+        <li>Shorts, TV movies, and documentaries are not included</li>
+        <li>The list is ranked by a formula which includes the number of ratings each movie received from users, and value of ratings received from regular users</li>
+        <li>To be included on the list, a movie must receive ratings from at least 25000 users</li>  
+    </ul>
+
+    <p><a href="rankings.php">Learn more</a> about how list ranking is determined.</p>
+</div>
+
