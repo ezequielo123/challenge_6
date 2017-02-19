@@ -4,7 +4,7 @@
     <ol>
         <?php foreach ($new_movies as $movie) : ?>
             <li class="space-between">
-                <a href="?page=movie.php?id=<?php echo $movie->imdb_id; ?>">
+                <a href="?page=movie&amp;id=<?php echo $movie->imdb_id; ?>">
                     <?php echo $movie->name; ?>
                 </a>
             </li>

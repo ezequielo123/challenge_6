@@ -4,14 +4,14 @@
     <ol>
         <?php foreach ($actors_list as $actor) : ?>
             <li class="space-between">
-                <a href="?page=actor.php?id=<?php echo $actor->imdb_id; ?>">
+                <a href="?page=actor&amp;id=<?php echo $actor->imdb_id; ?>">
                     <?php echo $actor->fullname; ?>
                 </a>
             </li>    
         <?php endforeach; ?>
     </ol>
 
-    <p><a href="http://www.imdb.com/search/name?gender=male,female&ref_=nv_cel_m_3" target="_blank">See the complete list of actors</a></p>  
+    <p><a href="?page=actors_list">See the complete list of actors</a></p>  
     <br>
     <hr>
     <br>

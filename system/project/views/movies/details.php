@@ -7,9 +7,11 @@
                 <td><strong>IMDB Rating</strong></td>
             </tr>
             <?php foreach ($movies as $movie) : ?>
-            <tr>   
+            <tr>  
                 <td>
-                    <?php echo $movie->name; ?> <?php echo ' <small> (' . $movie->year . ')</small> '; ?>
+                    <a href="?page=movie&amp;id=<?php echo $movie->imdb_id; ?>">
+                        <?php echo $movie->name; ?> <?php echo ' <small> (' . $movie->year . ')</small> '; ?>
+                    </a>    
                 </td>
                 <td>
                     <?php echo '&star; ' . $movie->rating; ?>

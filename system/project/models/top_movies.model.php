@@ -10,8 +10,10 @@ class Movies_Model extends model
         $query = "
             SELECT imdb_movie.* 
             FROM imdb_movie 
-            WHERE imdb_movie.rating > 9.7
+            WHERE imdb_movie.rating > 8.7
+            AND votes_nr > 150000
             order by rating DESC
+            LIMIT 6
         ";
 
         //run query and get result set
