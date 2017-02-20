@@ -7,6 +7,10 @@ $right_menu->new_movies = new_Movies_Model::getNewMovie();
 
 $mov = new view('movie/mov');
 $mov->movie_name = Selected_Movie_Model::getSelectedMovie($unique_id);
+$mov->movie_type = Selected_Movie_Model::getSelectedMovieType($unique_id);
+$mov->all_movie_actors = Selected_Movie_Model::getActorsFromMovie($unique_id);
+$mov->movie_genre = Selected_Movie_Model::getGenreFromMovie($unique_id);
+
 
 //movie actors
 $actors = new view('movies/actors');

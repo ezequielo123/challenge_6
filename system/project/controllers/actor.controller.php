@@ -7,6 +7,7 @@ $right_menu->new_movies = new_Movies_Model::getNewMovie();
 
 $selected_actor = new view('actor/selected_actor');
 $selected_actor->actor = Selected_Actors_Model::getSelected_Actors($unique_actor_id);
+$selected_actor->actors_movie_list = Selected_Actors_Model::getMoviesFromSelected_Actors($unique_actor_id);
 
 //movie actors
 $actors = new view('movies/actors');
