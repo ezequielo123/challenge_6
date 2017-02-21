@@ -9,10 +9,22 @@
         }
      ?>   
         
-    <h2><?php echo $movie_name->name; ?><?php echo ' <small> (' . $movie_name->year . ')</small>'; ?></h2>
+    <h2>
+        <?php echo $movie_name->name; ?><?php echo ' <small> (' . $movie_name->year . ')</small>'; ?>
+    </h2>
+
     <?php echo '<img src="' . $movie_name->image . '" class="mypicture2">'; ?>
-    <h4><?php echo $movie_name->description; ?></h4>
-    <a href="#" class="genre"><h6><?php echo $movie_type->name; ?></h6></a>
+    
+    <h4>
+        <?php echo $movie_name->description; ?>
+    </h4>
+    
+    <h6>
+        <a href="?page=genre" class="genre"><?php echo $movie_genre->name . '. '; ?></a>
+        <?php if (!empty ($movie_language)): ?>
+            <?php echo date('F j, Y') . ' (' . $movie_language->name . ')'; ?>
+        <?php endif; ?>
+    </h6>
     <br>
     <br>
     <br>

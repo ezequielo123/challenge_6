@@ -72,6 +72,27 @@ class Selected_Movie_Model extends model
         ";
 
         //run query and get result set
+        $resultset = db::query($query, array(isset($unique_id)));
+
+        //retreive all the rows as objects
+        $objects = static::fetchObject($resultset);
+        
+        return $objects;
+   }
+   
+   public static function getCountryFromMovie($unique_id)
+   {
+        //write query
+        $query = "
+            SELECT * 
+            FROM imdb_movie_has_origin_country
+            INNER JOIN imdb_movie_origin_country
+            ON imdb_movie_has_origin_country.imdb_movie_origin_country_id = imdb_movie_origin_country.id
+            WHERE imdb_movie_has_origin_country.imdb_movie_id = ?
+            LIMIT 1
+        ";
+
+        //run query and get result set
         $resultset = db::query($query, array($unique_id));
 
         //retreive all the rows as objects
